@@ -1,7 +1,26 @@
 aid: motiva
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/motiva.png
 name: Motiva
-description: Motiva is a company surfaced as a portfolio company of bloomberg-beta and added to the API
-  Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Motiva AI is an artificial-intelligence layer for enterprise email marketing that
+  plugs into Oracle Eloqua and other marketing-automation platforms to automate campaign
+  decision-making. It runs multivariate (A/B/n) message testing, patented per-contact
+  send-time optimization, frequency management, list and dark-pool cleanup via Smart
+  Suppress, audience discovery, and generative-AI email content through Motiva Generator
+  (including private-label custom LLMs). Motiva is delivered as an installed connector
+  rather than a public developer API, is trusted by enterprises such as Cisco and Thermo
+  Fisher, and maintains SOC 1/2/3 and ISO 27001 compliance with GDPR and HIPAA support.
 url: https://raw.githubusercontent.com/api-evangelist/motiva/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -11,9 +30,17 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
 tags:
 - Company
+- Marketing
+- Email Marketing
+- Marketing Automation
+- Artificial Intelligence
+- Machine Learning
+- Generative AI
+- Oracle Eloqua
+- Personalization
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -23,3 +50,40 @@ maintainers:
 common:
 - type: Website
   url: https://www.motiva.ai/
+- type: Documentation
+  url: https://help.plugin.motiva.ai/
+- type: Support
+  url: https://help.plugin.motiva.ai/
+- type: GettingStarted
+  url: https://help.plugin.motiva.ai/en/collections/173873-getting-started
+- type: Blog
+  url: https://www.motiva.ai/blog/
+- type: Pricing
+  url: https://help.plugin.motiva.ai/en/articles/3003565-how-much-does-motiva-ai-cost
+- type: SignUp
+  url: https://www.motiva.ai/get-a-demo/
+- type: Login
+  url: https://app.motiva.ai/
+- type: TermsOfService
+  url: https://www.motiva.ai/terms-of-use/
+- type: PrivacyPolicy
+  url: https://www.motiva.ai/data-protection/
+- type: GitHubOrganization
+  url: https://github.com/Motiva-AI
+- type: Integrations
+  url: https://cloudmarketplace.oracle.com/marketplace/en_US/listing/28113790
+- type: Compliance
+  url: https://www.motiva.ai/data-protection/
+- type: TrustCenter
+  url: security/motiva-trust-center.yml
+- type: Conformance
+  url: conformance/motiva-conformance.yml
+- type: DomainSecurity
+  url: security/motiva-domain-security.yml
+- type: LLMsTxt
+  url: llms/motiva-llms.txt
+x-enrichment:
+  date: '2026-07-20'
+  status: enriched
+  artifacts_added: 4
+  pass: local-v1

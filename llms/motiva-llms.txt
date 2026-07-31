@@ -1,0 +1,33 @@
+# Motiva AI
+
+> Motiva AI is an artificial-intelligence layer for enterprise email marketing that plugs into Oracle Eloqua and other marketing-automation platforms. It automates campaign decision-making with multivariate (A/B/n) message testing, patented send-time optimization, frequency management, list/dark-pool cleanup, audience discovery, and generative-AI email content. It is delivered as an installed connector rather than a public developer API.
+
+## Products
+- [Motiva Message Testing AI](https://www.motiva.ai/products/): A/B/n and multivariate email message testing across multi-step campaigns
+- [Motiva Send Time AI](https://www.motiva.ai/products/): U.S.-patented per-contact send-time optimization
+- [Motiva Frequency Management](https://www.motiva.ai/products/): prevents over-emailing of contacts
+- [Motiva Smart Suppress](https://www.motiva.ai/products/): removes problematic contacts to clean a segment
+- [Motiva Generator](https://www.motiva.ai/products-motiva-generator/): generative-AI email content, including private-label custom LLMs
+
+## Docs
+- [Help Center](https://help.plugin.motiva.ai/): installation, configuration, usage
+- [Getting Started](https://help.plugin.motiva.ai/en/collections/173873-getting-started)
+- [Onboarding & Training](https://help.plugin.motiva.ai/en/collections/3668193-motiva-onboarding-training)
+- [Eloqua Connector install guide](https://help.plugin.motiva.ai/en/articles/1328026-how-to-install-the-motiva-ai-eloqua-connector)
+
+## Integrations
+- [Oracle Eloqua (Oracle Cloud Marketplace)](https://cloudmarketplace.oracle.com/marketplace/en_US/listing/28113790)
+
+## Company
+- [Website](https://www.motiva.ai/)
+- [Blog](https://www.motiva.ai/blog/)
+- [Team](https://www.motiva.ai/team/)
+- [Pricing (Help Center)](https://help.plugin.motiva.ai/en/articles/3003565-how-much-does-motiva-ai-cost)
+- [Get a Demo](https://www.motiva.ai/get-a-demo/)
+- [Terms of Use](https://www.motiva.ai/terms-of-use/)
+- [Data Protection](https://www.motiva.ai/data-protection/)
+- [GitHub](https://github.com/Motiva-AI)
+
+## Notes
+- No public developer API, OpenAPI specification, or OAuth surface is published; Motiva operates as an installed Eloqua/marketing-automation connector.
+- Security & compliance: SOC 1/2/3, ISO 27001, SSAE 16, GDPR, HIPAA.

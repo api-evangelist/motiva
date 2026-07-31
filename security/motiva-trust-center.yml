@@ -1,0 +1,21 @@
+generated: '2026-07-20'
+method: searched
+source: https://www.motiva.ai/data-protection/
+url: https://www.motiva.ai/data-protection/
+certifications:
+  - SOC 1
+  - SOC 2
+  - SOC 3
+  - ISO 27001
+  - SSAE 16
+  - GDPR
+  - HIPAA
+posture: >-
+  Motiva AI's SaaS platform is hosted in a Tier 1 data center with SOC 1/2/3,
+  ISO 27001 and SSAE 16 certifications. Motiva states it does not store
+  Personally Identifying Information outside the customer's secure environment,
+  regularly evaluates application and network vulnerabilities, and operates the
+  Motiva Generator LLM tooling under strict security and privacy controls.
+evidence:
+  - source: https://www.motiva.ai/data-protection/
+    keywords: [soc, iso 27001, ssae 16, data protection, gdpr, hipaa]
