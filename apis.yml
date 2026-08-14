@@ -30,7 +30,7 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-20'
+modified: '2026-08-13'
 tags:
 - Company
 - Marketing
@@ -82,8 +82,42 @@ common:
   url: security/motiva-domain-security.yml
 - type: LLMsTxt
   url: llms/motiva-llms.txt
+- type: Packages
+  url: packages/motiva-packages.yml
+- type: Plans
+  url: plans/motiva-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/motiva-rate-limits.yml
+- type: Lifecycle
+  url: lifecycle/motiva-lifecycle.yml
+x-well-known-note: >-
+  well-known/motiva-well-known.yml records the /.well-known/ probe across all four
+  Motiva hosts but is deliberately NOT wired as type WellKnown or SecurityTxt. The
+  only 200 carrying a real document is Intercom's security.txt served on Motiva's
+  Intercom-hosted Help Center subdomain (Canonical: app.intercom.com); every other
+  200 is an SPA catch-all shell and api.motiva.ai 403s on every path. No Motiva-served
+  well-known surface exists, so no pointer is claimed.
 x-enrichment:
-  date: '2026-07-20'
-  status: enriched
-  artifacts_added: 4
+  date: '2026-08-13'
+  status: minimal
+  artifacts_added: 5
   pass: local-v1
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    Motiva ships only as an installed Oracle Eloqua connector plus a customer web app —
+    its one API-shaped host, api.motiva.ai, returns HTTP 403 {"message":"Forbidden"} on
+    every anonymous path including all of /.well-known/, and the complete public Help
+    Center index at help.plugin.motiva.ai/llms.txt (HTTP 200) documents connector setup
+    with no API reference, no endpoint, no key issuance and no spec anywhere.
+  evidence:
+    - url: https://api.motiva.ai/openapi.json
+      status: 403
+    - url: https://api.motiva.ai/.well-known/agent-card.json
+      status: 403
+    - url: https://help.plugin.motiva.ai/llms.txt
+      status: 200
+    - url: https://www.motiva.ai/openapi.json
+      status: 202
+  checked: '2026-08-13'
