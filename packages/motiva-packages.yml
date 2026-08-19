@@ -1,0 +1,165 @@
+generated: '2026-08-13'
+method: searched
+source: >-
+  Clojars search + artifact APIs (clojars.org/search?q=motiva, clojars.org/api/artifacts/…,
+  repo.clojars.org/…/maven-metadata.xml) and the Motiva-AI GitHub organization
+  (github.com/Motiva-AI), probed 2026-08-13.
+package_count: 11
+sdk_count: 0
+note: >-
+  IMPORTANT — these are NOT SDKs, and no `SDKs` pointer is emitted for Motiva.
+  Motiva publishes eleven first-party open-source Clojure libraries to Clojars under the
+  `motiva` and `ai.motiva` groups, mirrored from github.com/Motiva-AI. Every one is
+  internal platform infrastructure the company open-sourced — AWS Step Functions,
+  SQS and Kinesis wrappers, logging/debug macros, test helpers — not a client library
+  for a Motiva API. Motiva ships no public API, so there is nothing for an SDK to wrap.
+  Recording them as `Packages` is accurate; recording them as `SDKs` would credit Motiva
+  with a developer-facing client surface it does not have.
+  CURRENCY: the whole set is dormant. The newest release is ai.motiva/circleci.test
+  (2023-07-22) and the median last-publish year is 2021; five of the eleven have not
+  been published since 2021 or earlier. Registries probed with no first-party Motiva
+  package found: npm, PyPI, RubyGems, crates.io (npm's `motiva-components` belongs to
+  an unrelated author, github.com/thang40/motiva-v2).
+registries_probed:
+  - {registry: clojars, result: 11 first-party artifacts}
+  - {registry: npm, result: none first-party}
+  - {registry: pypi, result: none (motiva / motiva-ai / motivaai all 404)}
+  - {registry: rubygems, result: none (motiva 404)}
+  - {registry: crates.io, result: none}
+packages:
+  - language: clojure
+    registry: clojars
+    name: ai.motiva/stepwise
+    url: https://clojars.org/ai.motiva/stepwise
+    repository: https://github.com/Motiva-AI/stepwise
+    install: '[ai.motiva/stepwise "0.8.1"]'
+    version: 0.8.1
+    published: '2023-07-20'
+    official: true
+    kind: infrastructure-library
+    description: Clojure AWS Step Functions library (45 stars, most-starred Motiva repo)
+
+  - language: clojure
+    registry: clojars
+    name: ai.motiva/circleci.test
+    url: https://clojars.org/ai.motiva/circleci.test
+    repository: https://github.com/Motiva-AI/circleci.test
+    install: '[ai.motiva/circleci.test "0.5.1"]'
+    version: 0.5.1
+    published: '2023-07-22'
+    official: true
+    kind: infrastructure-library
+    description: Motiva fork of the enhanced Clojure test runner for clojure.test
+
+  - language: clojure
+    registry: clojars
+    name: ai.motiva/dbxray
+    url: https://clojars.org/ai.motiva/dbxray
+    repository: https://github.com/Motiva-AI/dbxray
+    install: '[ai.motiva/dbxray "0.1.1"]'
+    version: 0.1.1
+    published: '2023-04-10'
+    official: true
+    kind: infrastructure-library
+    description: Motiva fork — view a database's metadata skeleton and generate schemas
+
+  - language: clojure
+    registry: clojars
+    name: motiva/clj-sqs-extended
+    url: https://clojars.org/motiva/clj-sqs-extended
+    repository: https://github.com/Motiva-AI/clj-sqs-extended
+    install: '[motiva/clj-sqs-extended "0.6.0"]'
+    version: 0.6.0
+    published: '2022-11-01'
+    official: true
+    kind: infrastructure-library
+    description: >-
+      Clojure wrapper for AWS SQS with support for large messages up to 2GB
+      (wraps amazon-sqs-java-extended-client-lib)
+
+  - language: clojure
+    registry: clojars
+    name: ai.motiva/pipeline-transit
+    url: https://clojars.org/ai.motiva/pipeline-transit
+    repository: https://github.com/Motiva-AI/pipeline-transit
+    install: '[ai.motiva/pipeline-transit "0.1.1"]'
+    version: 0.1.1
+    published: '2022-10-27'
+    official: true
+    kind: infrastructure-library
+    description: Transit handlers for other Motiva pipeline libraries
+
+  - language: clojure
+    registry: clojars
+    name: ai.motiva/clj-kinesis-client
+    url: https://clojars.org/ai.motiva/clj-kinesis-client
+    repository: https://github.com/Motiva-AI/clj-kinesis-client
+    install: '[ai.motiva/clj-kinesis-client "1.0.1-SNAPSHOT"]'
+    version: 1.0.1-SNAPSHOT
+    published: '2022-09-28'
+    official: true
+    kind: infrastructure-library
+    description: >-
+      Minimalist Clojure wrapper for AWS Kinesis. SNAPSHOT only — Clojars reports no
+      released (non-SNAPSHOT) version for this artifact.
+
+  - language: clojure
+    registry: clojars
+    name: ai.motiva/morph
+    url: https://clojars.org/ai.motiva/morph
+    repository: https://github.com/Motiva-AI/morph
+    install: '[ai.motiva/morph "1.3.0"]'
+    version: 1.3.0
+    published: '2021-06-19'
+    official: true
+    kind: infrastructure-library
+    description: Motiva fork — a small collection of useful data transformations
+
+  - language: clojure
+    registry: clojars
+    name: motiva/with-log
+    url: https://clojars.org/motiva/with-log
+    repository: https://github.com/Motiva-AI/with-log
+    install: '[motiva/with-log "0.3.0"]'
+    version: 0.3.0
+    published: '2021-03-31'
+    official: true
+    kind: infrastructure-library
+    description: Log macro for capturing errors and timings
+
+  - language: clojure
+    registry: clojars
+    name: motiva/sqs-utils
+    url: https://clojars.org/motiva/sqs-utils
+    repository: https://github.com/Motiva-AI/sqs-utils
+    install: '[motiva/sqs-utils "0.10.1"]'
+    version: 0.10.1
+    published: '2020-10-13'
+    official: true
+    kind: infrastructure-library
+    description: Higher-level SQS utilities for use in Motiva products
+
+  - language: clojure
+    registry: clojars
+    name: motiva/wait-for
+    url: https://clojars.org/motiva/wait-for
+    repository: https://github.com/Motiva-AI/wait-for
+    install: '[motiva/wait-for "0.3.0"]'
+    version: 0.3.0
+    published: '2018-09-20'
+    official: true
+    kind: infrastructure-library
+    description: Synchronization test helper used across Motiva code
+
+  - language: clojure
+    registry: clojars
+    name: motiva/inspect
+    url: https://clojars.org/motiva/inspect
+    install: '[motiva/inspect "0.1.1"]'
+    version: 0.1.1
+    published: '2018-08-06'
+    official: true
+    kind: infrastructure-library
+    description: >-
+      Debugging macro. Latest release 0.1.1; a 0.2.0-SNAPSHOT exists but was never
+      cut as a release.

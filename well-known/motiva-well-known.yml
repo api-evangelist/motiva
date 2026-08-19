@@ -1,0 +1,116 @@
+generated: '2026-08-13'
+method: probed
+source: >-
+  Live GET of the /.well-known/ discovery surface on every Motiva-controlled host
+  found in apis.yml (www.motiva.ai, app.motiva.ai, help.plugin.motiva.ai) plus
+  api.motiva.ai, the app backend host discovered by DNS during contract discovery.
+note: >-
+  NO WellKnown or SecurityTxt pointer is emitted for Motiva. Only one probe returned
+  a real document — https://help.plugin.motiva.ai/.well-known/security.txt (200,
+  RFC 9116) — and that document is Intercom's, not Motiva's: it names
+  security@intercom.com and bugcrowd.com/intercom as the contacts and declares
+  "Canonical: https://app.intercom.com/.well-known/security.txt". help.plugin.motiva.ai
+  is Motiva's Help Center running on Intercom, so the file is the SaaS platform's
+  boilerplate served on Motiva's subdomain, not a Motiva vulnerability-disclosure
+  program. Crediting Motiva with it would be false credit. Every other 200 in this
+  file is an SPA catch-all or a bot challenge, not a document — see per-path notes.
+hosts:
+  - host: https://www.motiva.ai
+    role: marketing site
+    note: >-
+      Every path on this host — including /robots.txt and /sitemap.xml — answers HTTP 202
+      with a SiteGround bot-challenge interstitial
+      (<meta http-equiv="refresh" content="0;/.well-known/sgcaptcha/?r=...">).
+      Nothing on this host was machine-readable during this pass. We do not evade challenges.
+    documents:
+      - path: /.well-known/security.txt
+        status: 202
+        document: false
+        note: SiteGround sgcaptcha interstitial, 195 bytes of HTML
+      - path: /llms.txt
+        status: 202
+        document: false
+        note: SiteGround sgcaptcha interstitial
+      - path: /openapi.json
+        status: 202
+        document: false
+        note: SiteGround sgcaptcha interstitial
+
+  - host: https://app.motiva.ai
+    role: customer application (Angular SPA)
+    note: >-
+      SPA catch-all. Every /.well-known/* path returns HTTP 200 with the same 2,991-byte
+      index.html shell (<!doctype html> … <app>Loading...</app>). These are the dominant
+      false positive on this probe and are recorded as document: false.
+    documents:
+      - path: /.well-known/security.txt
+        status: 200
+        document: false
+        note: HTML SPA shell, not a security.txt
+      - path: /.well-known/openid-configuration
+        status: 200
+        document: false
+        note: HTML SPA shell
+      - path: /.well-known/oauth-authorization-server
+        status: 200
+        document: false
+        note: HTML SPA shell
+      - path: /.well-known/api-catalog
+        status: 200
+        document: false
+        note: HTML SPA shell
+      - path: /.well-known/ai-plugin.json
+        status: 200
+        document: false
+        note: HTML SPA shell
+      - path: /.well-known/agent-card.json
+        status: 200
+        document: false
+        note: HTML SPA shell — rejected as an agent card; no a2a/ artifact written
+
+  - host: https://api.motiva.ai
+    role: application backend (AWS-fronted; the app's private API host)
+    note: >-
+      Resolves (35.80.188.162) and answers, but every path — root, spec paths and every
+      /.well-known/* path — returns HTTP 403 with the AWS body {"message":"Forbidden"}.
+      No anonymous discovery surface at all.
+    documents:
+      - path: /.well-known/security.txt
+        status: 403
+        document: false
+      - path: /.well-known/openid-configuration
+        status: 403
+        document: false
+      - path: /.well-known/oauth-authorization-server
+        status: 403
+        document: false
+      - path: /.well-known/api-catalog
+        status: 403
+        document: false
+      - path: /.well-known/agent-card.json
+        status: 403
+        document: false
+      - path: /.well-known/agent.json
+        status: 403
+        document: false
+
+  - host: https://help.plugin.motiva.ai
+    role: Help Center (Intercom-hosted, CNAME)
+    documents:
+      - path: /.well-known/security.txt
+        status: 200
+        document: true
+        file: motiva-help-security.txt
+        owner: intercom
+        note: >-
+          Real RFC 9116 document, but Intercom's — Contact security@intercom.com and
+          bugcrowd.com/intercom, Canonical https://app.intercom.com/.well-known/security.txt.
+          Recorded for the record; NOT credited to Motiva.
+      - path: /llms.txt
+        status: 200
+        document: true
+        file: ../llms/motiva-llms.txt
+        owner: motiva
+        note: >-
+          Motiva's own published llms.txt (Intercom auto-generates it from the Help Center
+          content). Saved verbatim to llms/motiva-llms.txt and wired as type LLMsTxt.

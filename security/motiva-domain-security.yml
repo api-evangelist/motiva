@@ -1,12 +1,46 @@
-generated: '2026-07-20'
+generated: '2026-08-13'
 method: probed
-source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+source: >-
+  live DNS/TLS/HTTP probes of apis.yml hosts (0-working/probe-domain-security.py),
+  extended by hand with the three additional Motiva-controlled hosts found during
+  contract discovery: api.motiva.ai, app.motiva.ai and help.plugin.motiva.ai.
 hosts:
 - host: www.motiva.ai
+  role: marketing site
   https: true
   tls_version: TLSv1.3
-  cert_expires: Sep 12 11:36:33 2026 GMT
+  cert_expires: Nov 11 10:47:12 2026 GMT
   hsts: false
+  note: >-
+    Answers HTTP 202 with a SiteGround bot-challenge interstitial on every path,
+    including /robots.txt.
+- host: app.motiva.ai
+  role: customer application
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Nov  2 05:25:38 2026 GMT
+  hsts: true
+  hsts_max_age: 31536000
+  hsts_include_subdomains: true
+  hsts_preload: true
+  note: >-
+    The only Motiva host that sets HSTS. Two Strict-Transport-Security headers are
+    returned (max-age=31536000 includeSubDomains preload, and max-age=15724800
+    includeSubdomains) — a duplicated header, likely one from the app and one from the edge.
+- host: api.motiva.ai
+  role: application backend (AWS-fronted)
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Dec 13 23:59:59 2026 GMT
+  hsts: false
+  note: Returns HTTP 403 {"message":"Forbidden"} on every anonymous path.
+- host: help.plugin.motiva.ai
+  role: Help Center (Intercom-hosted)
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Oct 21 23:59:59 2026 GMT
+  hsts: false
+  note: 302 on the root; serves llms.txt and a security.txt (Intercom's) at 200.
 domains:
 - domain: motiva.ai
   dnssec: false

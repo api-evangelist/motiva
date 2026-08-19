@@ -1,0 +1,46 @@
+generated: '2026-08-13'
+method: searched
+source: https://help.plugin.motiva.ai/en/articles/3003565-how-much-does-motiva-ai-cost
+docs: https://help.plugin.motiva.ai/en/articles/3003565-how-much-does-motiva-ai-cost
+plan_count: 1
+model: contact-sales
+currency: USD
+billing_period: month
+note: >-
+  Motiva publishes a pricing *model* and a floor price, not a plan table. The Help
+  Center article "How much does Motiva AI cost?" (fetched verbatim as markdown at
+  .../3003565-how-much-does-motiva-ai-cost.md, HTTP 200, 2026-08-13) states pricing in
+  full: "Motiva AI pricing is based on the number of active, unique contacts in your
+  Oracle Eloqua contact database. 'Active' means emailed in the last twelve months.
+  There are no 'seats', and no limits on emails or data. Tiered pricing begins at just
+  $1000 per month … For a more specific quote for your team, please contact us."
+  Motiva names the metric, the floor, and what is explicitly NOT metered — but does not
+  publish the tier boundaries or per-tier prices, so only one entry is recorded here.
+  There is no self-serve signup and no API-priced product: the SignUp link in apis.yml
+  is a demo-request form. No machine-readable pricing/catalog endpoint exists.
+metering:
+  unit: active unique contact
+  definition: >-
+    An active, unique contact in the customer's Oracle Eloqua contact database;
+    "active" means emailed in the last twelve months.
+  not_metered:
+    - seats / named users
+    - emails sent
+    - data volume
+plans:
+  - name: Tiered (contact sales)
+    price: 1000
+    price_qualifier: starting at / floor
+    currency: USD
+    billing_period: month
+    quota:
+      unit: active unique contacts
+      included: null
+      note: Tier boundaries are not published; quote is per-customer.
+    overage: null
+    limits:
+      seats: unlimited
+      emails: unlimited
+      data: unlimited
+    signup: https://www.motiva.ai/get-a-demo/
+    source: https://help.plugin.motiva.ai/en/articles/3003565-how-much-does-motiva-ai-cost

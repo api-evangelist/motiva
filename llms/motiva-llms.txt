@@ -1,33 +1,123 @@
-# Motiva AI
+---
+generated: '2026-08-13'
+method: searched
+source: https://help.plugin.motiva.ai/llms.txt
+note: >-
+  Verbatim llms.txt published by Motiva AI at its Help Center host
+  (help.plugin.motiva.ai, Motiva's Intercom-hosted Help Center; HTTP 200,
+  text/plain, 14,163 bytes, fetched 2026-08-13). This SUPERSEDES the
+  generated overview API Evangelist previously kept here — searched beats
+  generated. The marketing host www.motiva.ai serves a SiteGround bot
+  challenge (HTTP 202) on /llms.txt and every other path, so this docs host
+  is Motiva's only machine-readable surface. The document indexes the Eloqua
+  connector Help Center only; it names no API, no endpoint and no spec,
+  which is consistent with Motiva shipping no public developer API.
+---
+# Motiva AI Help Center
 
-> Motiva AI is an artificial-intelligence layer for enterprise email marketing that plugs into Oracle Eloqua and other marketing-automation platforms. It automates campaign decision-making with multivariate (A/B/n) message testing, patented send-time optimization, frequency management, list/dark-pool cleanup, audience discovery, and generative-AI email content. It is delivered as an installed connector rather than a public developer API.
+> Help center for Motiva AI
 
-## Products
-- [Motiva Message Testing AI](https://www.motiva.ai/products/): A/B/n and multivariate email message testing across multi-step campaigns
-- [Motiva Send Time AI](https://www.motiva.ai/products/): U.S.-patented per-contact send-time optimization
-- [Motiva Frequency Management](https://www.motiva.ai/products/): prevents over-emailing of contacts
-- [Motiva Smart Suppress](https://www.motiva.ai/products/): removes problematic contacts to clean a segment
-- [Motiva Generator](https://www.motiva.ai/products-motiva-generator/): generative-AI email content, including private-label custom LLMs
+## Getting Started
 
-## Docs
-- [Help Center](https://help.plugin.motiva.ai/): installation, configuration, usage
-- [Getting Started](https://help.plugin.motiva.ai/en/collections/173873-getting-started)
-- [Onboarding & Training](https://help.plugin.motiva.ai/en/collections/3668193-motiva-onboarding-training)
-- [Eloqua Connector install guide](https://help.plugin.motiva.ai/en/articles/1328026-how-to-install-the-motiva-ai-eloqua-connector)
+- [Tips and Tricks for New Users](https://help.plugin.motiva.ai/en/articles/2141610-tips-and-tricks-for-new-users.md): Ideas for things to try with Motiva Message Testing AI, geared towards new users.
+- [What is Motiva AI?](https://help.plugin.motiva.ai/en/articles/1328025-what-is-motiva-ai.md): Find the message variations and send times that work best for your audience
+- [How to install the Motiva AI Eloqua Connector](https://help.plugin.motiva.ai/en/articles/1328026-how-to-install-the-motiva-ai-eloqua-connector.md): Make the Motiva AI Optmizer available on the Eloqua Canvas
+- [Motiva Optimized Email Report](https://help.plugin.motiva.ai/en/articles/11426716-motiva-optimized-email-report.md): Quickly see all your Motiva optimized emails in one place
+- [How do I use Motiva AI to test email variations?](https://help.plugin.motiva.ai/en/articles/1328732-how-do-i-use-motiva-ai-to-test-email-variations.md): Replace an existing Eloqua Email component with a Motiva Message Testing AI
+- [Using Motiva AI's Per-Contact Send Time AI](https://help.plugin.motiva.ai/en/articles/2673822-using-motiva-ai-s-per-contact-send-time-ai.md): Personalized STO for every contact
+- [How to use the Frequency Management Decision Service](https://help.plugin.motiva.ai/en/articles/7938548-how-to-use-the-frequency-management-decision-service.md): Motiva's Frequency Management Decision Service can be configured right from the Eloqua canvas, and applied to any step. Here's how it works.
+- [What should I optimize: Open Rate or Clickthrough Rate?](https://help.plugin.motiva.ai/en/articles/2828946-what-should-i-optimize-open-rate-or-clickthrough-rate.md): What to choose when you're testing message variations
+- [Replace an Eloqua Decision Service with Motiva AI](https://help.plugin.motiva.ai/en/articles/1328970-replace-an-eloqua-decision-service-with-motiva-ai.md): Motiva Message Testing AI requires Motiva AI Decision Services
+- [How do I use Frequency Management rules?](https://help.plugin.motiva.ai/en/articles/6418420-how-do-i-use-frequency-management-rules.md): Fine tune the number of emails your contacts receive
+- [Viewing the Results of a Message Test](https://help.plugin.motiva.ai/en/articles/1328777-viewing-the-results-of-a-message-test.md): Interpret Motiva Message Testing AI results
+- [How do I use the Performance Reporting Dashboard?](https://help.plugin.motiva.ai/en/articles/7939768-how-do-i-use-the-performance-reporting-dashboard.md): Looking to compare recent engagement metrics to your historical baselines? This is where you'll find it.
 
-## Integrations
-- [Oracle Eloqua (Oracle Cloud Marketplace)](https://cloudmarketplace.oracle.com/marketplace/en_US/listing/28113790)
+## Motiva Onboarding & Training
 
-## Company
-- [Website](https://www.motiva.ai/)
-- [Blog](https://www.motiva.ai/blog/)
-- [Team](https://www.motiva.ai/team/)
-- [Pricing (Help Center)](https://help.plugin.motiva.ai/en/articles/3003565-how-much-does-motiva-ai-cost)
-- [Get a Demo](https://www.motiva.ai/get-a-demo/)
-- [Terms of Use](https://www.motiva.ai/terms-of-use/)
-- [Data Protection](https://www.motiva.ai/data-protection/)
-- [GitHub](https://github.com/Motiva-AI)
+- [Welcome to Motiva AI](https://help.plugin.motiva.ai/en/articles/6636963-welcome-to-motiva-ai.md): 5 minute introduction
+- [Installing & Adding Users to Motiva](https://help.plugin.motiva.ai/en/articles/6637544-installing-adding-users-to-motiva.md)
+- [Motiva in Eloqua](https://help.plugin.motiva.ai/en/articles/6637568-motiva-in-eloqua.md): Where to find Motiva in Eloqua
+- [The Motiva Platform](https://help.plugin.motiva.ai/en/articles/6637588-the-motiva-platform.md): What you'll find on the Motiva platform
+- [Engagement Funnel Report](https://help.plugin.motiva.ai/en/articles/6650935-engagement-funnel-report.md): Monitor the overall health of your email marketing campaigns and compare it to previous months
+- [Persona Reports](https://help.plugin.motiva.ai/en/articles/6650980-persona-reports.md)
+- [Who Responded Report](https://help.plugin.motiva.ai/en/articles/6654086-who-responded-report.md)
+- [How Send Time AI Works](https://help.plugin.motiva.ai/en/articles/6637808-how-send-time-ai-works.md): Learn the basics of Motiva's Per-Contact Send Time Optimization
+- [Configuring Per-Contact Send Time AI](https://help.plugin.motiva.ai/en/articles/6637839-configuring-per-contact-send-time-ai.md): Learn how to configure a Motiva Send Time AI step to get the best results
+- [Send Time AI Reporting](https://help.plugin.motiva.ai/en/articles/6637868-send-time-ai-reporting.md): How to analyze the reports generated by Send Time AI
+- [How Motiva Message Testing Works](https://help.plugin.motiva.ai/en/articles/6637587-how-motiva-message-testing-works.md)
+- [Designing a Message Test](https://help.plugin.motiva.ai/en/articles/6640987-designing-a-message-test.md): Want some ideas for how to design an effective message test? This is the place.
+- [Configuring a Message Test](https://help.plugin.motiva.ai/en/articles/6641103-configuring-a-message-test.md): Replace an existing Eloqua Email component with a Motiva Message Testing AI
+- [Message Testing Reporting](https://help.plugin.motiva.ai/en/articles/6641154-message-testing-reporting.md): How to interpret Motiva Message Testing AI results
 
-## Notes
-- No public developer API, OpenAPI specification, or OAuth surface is published; Motiva operates as an installed Eloqua/marketing-automation connector.
-- Security & compliance: SOC 1/2/3, ISO 27001, SSAE 16, GDPR, HIPAA.
+## FAQs
+
+- [Subject Line Analyzer](https://help.plugin.motiva.ai/en/articles/4490310-subject-line-analyzer.md)
+- [How do I cancel a running Motiva step?](https://help.plugin.motiva.ai/en/articles/4219725-how-do-i-cancel-a-running-motiva-step.md)
+- [How can I see my campaign data in Eloqua Insight?](https://help.plugin.motiva.ai/en/articles/3688700-how-can-i-see-my-campaign-data-in-eloqua-insight.md): How to create Insight reports from Motiva AI step results
+- [How does Motiva AI work?](https://help.plugin.motiva.ai/en/articles/1310363-how-does-motiva-ai-work.md)
+- [How is this different from A/B testing?](https://help.plugin.motiva.ai/en/articles/1310386-how-is-this-different-from-a-b-testing.md)
+- [What can I test / optimize?](https://help.plugin.motiva.ai/en/articles/1310396-what-can-i-test-optimize.md)
+- [How much does Motiva AI cost?](https://help.plugin.motiva.ai/en/articles/3003565-how-much-does-motiva-ai-cost.md): A simple approach to pricing
+- [Does Motiva do Send Time Optimization?](https://help.plugin.motiva.ai/en/articles/2659999-does-motiva-do-send-time-optimization.md): Otherwise known as STO
+- [Is there a minimum number of contacts needed for Send Time AI?](https://help.plugin.motiva.ai/en/articles/4335857-is-there-a-minimum-number-of-contacts-needed-for-send-time-ai.md)
+- [What browsers do you support?](https://help.plugin.motiva.ai/en/articles/2861969-what-browsers-do-you-support.md)
+- [What Marketing Automation platforms do you support?](https://help.plugin.motiva.ai/en/articles/1310372-what-marketing-automation-platforms-do-you-support.md)
+- [What Eloqua permissions are needed?](https://help.plugin.motiva.ai/en/articles/3078630-what-eloqua-permissions-are-needed.md): Users need certain Eloqua permissions to use Motiva AI.
+- [Is there a minimum population size required?](https://help.plugin.motiva.ai/en/articles/1310400-is-there-a-minimum-population-size-required.md)
+- [What is the All In feature?](https://help.plugin.motiva.ai/en/articles/3179477-what-is-the-all-in-feature.md): When Message Testing, go "All In" to immediately send the winning email to all remaining contacts.
+- [What do I need to do?](https://help.plugin.motiva.ai/en/articles/1310405-what-do-i-need-to-do.md)
+- [When does Motiva AI declare a winner?](https://help.plugin.motiva.ai/en/articles/1310408-when-does-motiva-ai-declare-a-winner.md)
+- [What happens if there is no single winner?](https://help.plugin.motiva.ai/en/articles/1310430-what-happens-if-there-is-no-single-winner.md)
+- [I like your reports. Can I just run a single email through Motiva AI to get the reports?](https://help.plugin.motiva.ai/en/articles/1310436-i-like-your-reports-can-i-just-run-a-single-email-through-motiva-ai-to-get-the-reports.md)
+- [How do I optimize my send times?](https://help.plugin.motiva.ai/en/articles/1310439-how-do-i-optimize-my-send-times.md)
+- [How do I find new audiences?](https://help.plugin.motiva.ai/en/articles/1310442-how-do-i-find-new-audiences.md)
+- [Do you do ad buying / bidding?](https://help.plugin.motiva.ai/en/articles/1310447-do-you-do-ad-buying-bidding.md)
+- [Does Motiva AI test web pages?](https://help.plugin.motiva.ai/en/articles/1310448-does-motiva-ai-test-web-pages.md)
+- [What is Confidence?](https://help.plugin.motiva.ai/en/articles/1351334-what-is-confidence.md)
+- [What is the Confidence Threshold?](https://help.plugin.motiva.ai/en/articles/1351336-what-is-the-confidence-threshold.md)
+- [What is Rate Uncertainty?](https://help.plugin.motiva.ai/en/articles/1351335-what-is-rate-uncertainty.md)
+- [What is Email Priority?](https://help.plugin.motiva.ai/en/articles/3024754-what-is-email-priority.md): How to choose which email steps are prioritized
+- [What is Data Health?](https://help.plugin.motiva.ai/en/articles/3024837-what-is-data-health.md): And how do I select Contact DB fields to show or hide by default in Motiva reporting?
+
+## Tips, Tricks, and Semi-Secret Recipes
+
+- [Best Practices for a Successful Email Marketing Campaign](https://help.plugin.motiva.ai/en/articles/6408335-best-practices-for-a-successful-email-marketing-campaign.md): It takes a lot of planning and effort to create an engaging email marketing campaign. Here's a checklist to ensure no details are missed.
+- [Campaign Analysis by Segment \(a.k.a. Persona\)](https://help.plugin.motiva.ai/en/articles/7437938-campaign-analysis-by-segment-a-k-a-persona.md): Learn how to run the Campaign Analysis by Segment report on the Motiva Platform using Personas
+- [Developing Subject Line Versions](https://help.plugin.motiva.ai/en/articles/4636210-developing-subject-line-versions.md): A simple process with tips for developing subject line versions and improving your message testing results.
+- [What to test](https://help.plugin.motiva.ai/en/articles/4219969-what-to-test.md): Some example variables you can test and optimize with Motiva
+- [Be Bold!](https://help.plugin.motiva.ai/en/articles/4219951-be-bold.md): The more differentiated your variations are from one another, the better!
+- [Give Motiva steps time](https://help.plugin.motiva.ai/en/articles/4219947-give-motiva-steps-time.md)
+- [Always use more than two variations \(if you can\)](https://help.plugin.motiva.ai/en/articles/4219943-always-use-more-than-two-variations-if-you-can.md)
+- [One Day Send Time AI](https://help.plugin.motiva.ai/en/articles/13630726-one-day-send-time-ai.md): Send Time Optimization for Urgent, Time-Sensitive Emails
+- [Frequency Reporting](https://help.plugin.motiva.ai/en/articles/4491111-frequency-reporting.md): Grow audience engagement by tailoring email frequency
+- [Persona Report](https://help.plugin.motiva.ai/en/articles/5125808-persona-report.md): How to set up and interpret Motiva's Persona Report
+- [Find new segmentation ideas](https://help.plugin.motiva.ai/en/articles/4219936-find-new-segmentation-ideas.md)
+- [Set up your default segmentation reporting fields](https://help.plugin.motiva.ai/en/articles/4219893-set-up-your-default-segmentation-reporting-fields.md): Configure default Who Responded fields and hiding unused fields from segmentation reports
+
+## Frequency Management
+
+- [Automated Priority for Frequency Management](https://help.plugin.motiva.ai/en/articles/8439951-automated-priority-for-frequency-management.md)
+
+## Dark Pool Cleanup
+
+- [Dark Pool Smart Suppress](https://help.plugin.motiva.ai/en/articles/6745911-dark-pool-smart-suppress.md): Use Motiva AI's Smart Suppress Eloqua Decision Service
+- [Unresponsive Contacts](https://help.plugin.motiva.ai/en/articles/5590494-unresponsive-contacts.md): Unresponsive Contacts are part of your Dark Pool. When treated, email performance improves immediately, while reducing deliverability risk
+- [Misclassified Bouncebacks](https://help.plugin.motiva.ai/en/articles/5590497-misclassified-bouncebacks.md): Dark Pool identifies Misclassified Bouncebacks to prevent deliverability issues and improve overall performance.
+- [Scanners](https://help.plugin.motiva.ai/en/articles/5590499-scanners.md)
+- [Bounceback Report Export Guide](https://help.plugin.motiva.ai/en/articles/5725300-bounceback-report-export-guide.md): How to Export the "Email Bounceback History with Messages" Report from Eloqua Insight
+- [Import Motiva Dark Pool Score into Eloqua](https://help.plugin.motiva.ai/en/articles/6506246-import-motiva-dark-pool-score-into-eloqua.md): Import the Motiva AI Dark Pool score into Eloqua and use it to segment your contacts.
+- [Dark Pool Validation: Contact Checker](https://help.plugin.motiva.ai/en/articles/8387003-dark-pool-validation-contact-checker.md)
+- [Dark Pool Domain Analysis](https://help.plugin.motiva.ai/en/articles/11794740-dark-pool-domain-analysis.md): Learn how to use the Dark Pool Domain Analysis Report
+
+## Diagnosing Issues
+
+- [How to determine the cause of Excluded by Eloqua message](https://help.plugin.motiva.ai/en/articles/5647760-how-to-determine-the-cause-of-excluded-by-eloqua-message.md): If you're seeing an unexpectedly high percentage of exclusions in your campaign, follow these steps to determine the cause
+- [How to Update a Campaign in Progress](https://help.plugin.motiva.ai/en/articles/6408477-how-to-update-a-campaign-in-progress.md): Need to make changes to a campaign after activation? Here's how you can add steps, replace steps, and update steps after campaign activation
+- [Send Time AI: Requirements, Best Practices, and Issue Diagnosis](https://help.plugin.motiva.ai/en/articles/6503113-send-time-ai-requirements-best-practices-and-issue-diagnosis.md): Looking to get the most out of Send Time AI? Of course you are. Here's where you'll find answers to both basic and advanced questions
+- [Message Testing Issue Diagnosis](https://help.plugin.motiva.ai/en/articles/6516113-message-testing-issue-diagnosis.md): Multivariate Message Testing not working the way you expect? Check out this article to diagnose issues.
+
+## Content Generation
+
+- [Motiva Generator™](https://help.plugin.motiva.ai/en/articles/8843588-motiva-generator.md): Automatically brainstorm and generate email drafts adapted to your brand and your audience using your own data.
+- [Custom Brand Voices for Generator™](https://help.plugin.motiva.ai/en/articles/9184237-custom-brand-voices-for-generator.md)
+- [Persona Voice](https://help.plugin.motiva.ai/en/articles/9650087-persona-voice.md): Automatically adapt email content to a specific audience using Persona Voice

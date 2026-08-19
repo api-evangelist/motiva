@@ -1,0 +1,50 @@
+generated: '2026-08-13'
+method: probed
+source: >-
+  DNS + HTTP probes of status.motiva.ai, status.plugin.motiva.ai and motiva.statuspage.io,
+  plus the complete Help Center index at https://help.plugin.motiva.ai/llms.txt (2026-08-13).
+note: >-
+  Recorded as an honest set of negatives. Motiva ships an installed Oracle Eloqua
+  connector, not a versioned public API, so there is no version scheme, no deprecation
+  policy and no Sunset/Deprecation header contract to capture. NO StatusPage and NO
+  Deprecation pointer is emitted from this file — neither surface exists.
+versioning:
+  scheme: none-published
+  current: null
+  docs: null
+  note: >-
+    No API version appears anywhere in the public surface. The customer application at
+    app.motiva.ai carries internal, unversioned paths (/api/*, /core-api/api/*) behind a
+    session; releases reach customers through the Eloqua connector and the app, not
+    through a published version train.
+deprecation:
+  policy_url: null
+  sunset_header: false
+  note: No deprecation or sunset policy is published.
+sla:
+  url: null
+  uptime_target: null
+  note: No public SLA or uptime commitment found.
+status_page: null
+status_page_probes:
+  - url: https://status.motiva.ai
+    status: null
+    result: NXDOMAIN
+  - url: https://status.plugin.motiva.ai
+    status: null
+    result: NXDOMAIN
+  - url: https://motiva.statuspage.io/
+    status: 200
+    result: >-
+      FALSE POSITIVE — resolves and returns 200, but follows redirects to
+      https://www.atlassian.com/software/statuspage (title "Real-Time Incident
+      Communication with Statuspage | Atlassian"). This is Atlassian's marketing page,
+      not a Motiva status page. Statuspage.io answers on unclaimed subdomains, which is
+      exactly the shape that would have been miscounted as a status page.
+changelog:
+  url: null
+  note: >-
+    No dated changelog or release-notes surface. The Help Center llms.txt index
+    (9 sections, 108 lines) has no "What's New" / release-notes collection, and the
+    marketing site is behind a bot challenge so its blog could not be read this pass.
+deprecated_operations: []

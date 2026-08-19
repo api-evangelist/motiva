@@ -1,0 +1,27 @@
+generated: '2026-08-13'
+method: searched
+source: https://help.plugin.motiva.ai/llms.txt
+limit_count: 0
+note: >-
+  Honest zero. Motiva publishes no API rate limits because it publishes no public API.
+  The full Help Center index (https://help.plugin.motiva.ai/llms.txt, HTTP 200,
+  2026-08-13 — 108 lines covering Getting Started, Onboarding & Training, FAQs,
+  Frequency Management, Dark Pool Cleanup, Diagnosing Issues and Content Generation)
+  contains no API reference, no endpoint, no key issuance and no throttling guidance.
+  The only host that behaves like an API, api.motiva.ai, returns HTTP 403
+  {"message":"Forbidden"} on every anonymous path, so no live RateLimit-* / X-RateLimit-*
+  headers could be observed either. Motiva's product-side limits are marketing controls
+  (Frequency Management rules that cap how often a contact is emailed), configured in
+  the Eloqua canvas — they are not API rate limits and are deliberately not recorded as such.
+headers_observed: []
+limits: []
+probes:
+  - url: https://api.motiva.ai/
+    status: 403
+    note: AWS-fronted app backend; no anonymous response carries rate-limit headers
+  - url: https://app.motiva.ai/core-api/api/campaign
+    status: 401
+    note: Session-authenticated application backend; no rate-limit headers on the 401
+  - url: https://help.plugin.motiva.ai/llms.txt
+    status: 200
+    note: Complete docs index; contains no rate-limit documentation
