@@ -44,3 +44,16 @@ plans:
       data: unlimited
     signup: https://www.motiva.ai/get-a-demo/
     source: https://help.plugin.motiva.ai/en/articles/3003565-how-much-does-motiva-ai-cost
+x-canonical:
+  generated: '2026-10-08'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models:
+  - subscription
+  units: []
+  plans:
+  - name: Tiered (contact sales)
+    access: other
+    model: subscription
+    model_how: derived
+    units: []
+    periods: []
